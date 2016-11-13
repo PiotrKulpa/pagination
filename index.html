@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="paginationTest">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  </head>
+  <body ng-controller="paginationCtrl">
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
+      
+      <ol>
+  <li ng-repeat="x in myData | limitTo: 30: paginationRange()">
+    {{ x.length + x.Name + ', ' + x.Country }}
+  </li>
+</ol>
+      <script src="main.js"></script>
+  </body>
+</html>
