@@ -7,10 +7,12 @@ app.controller('paginationCtrl', function($scope, $http){
         //console.log(paginationIndex);
     });
     $scope.paginationRange = function(pageNumber) {
-        return 20;
-        //1*10-10
-        //2*10-10
-        //this.pageNumber * 10 -10;
+        //return 20;
+        //alert('ok');
+        //console.log('okok')
+        //0*10
+        //1*10
+        //this.pageNumber * 10;
     };
     
     
