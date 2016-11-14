@@ -1,9 +1,11 @@
 <!doctype html>
 <html ng-app="paginationTest">
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   </head>
   <body ng-controller="paginationCtrl">
+
     <div>
       <label>Name</label>
       <input type="text" ng-model="yourName" placeholder="Enter a name here">
@@ -11,16 +13,16 @@
       <h1>Hello {{yourName}}!</h1>
     </div>
 
-      <ol>
-  <li ng-repeat="x in myData | limitTo: 10: n">
-    {{ x.length + x.Name + ', ' + x.Country }}
-  </li>
-</ol>
+    <ul>
+      <li ng-repeat="x in myData | limitTo: 10: n">
+        {{ x.length + x.Name + ', ' + x.Country }}
+      </li>
+    </ul>
 
 
-      <span ng-repeat="x in paginationData">
-        <span  ng-click="paginationRange(x)">{{x+1}}</span>
-      </span>
+      <ul class="pagination" ng-repeat="x in paginationData">
+        <li  ng-click="paginationRange(x)"><a href="#">{{x+1}}</a></li>
+      </ul>
 
       <script src="main.js"></script>
   </body>

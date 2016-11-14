@@ -11,13 +11,8 @@ app.controller('paginationCtrl', function($scope, $http){
         };
 
     });
-
+    $scope.n = 0;
     $scope.paginationRange = function(pageNumber) {
-
-      $scope.n = pageNumber * 10;
-
+    $scope.n = pageNumber * 10;
     };
-
-
-
 });
