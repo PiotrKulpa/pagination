@@ -5,21 +5,21 @@
   </head>
   <body ng-controller="paginationCtrl">
     <div>
-      <label>Name:</label>
+      <label>Name</label>
       <input type="text" ng-model="yourName" placeholder="Enter a name here">
       <hr>
       <h1>Hello {{yourName}}!</h1>
     </div>
 
       <ol>
-  <li ng-repeat="x in myData | limitTo: 30: paginationRange()">
+  <li ng-repeat="x in myData | limitTo: 10: n">
     {{ x.length + x.Name + ', ' + x.Country }}
   </li>
 </ol>
 
 
       <span ng-repeat="x in paginationData">
-        <span  ng-click="paginationRange(1)">{{x+1}}</span>
+        <span  ng-click="paginationRange(x)">{{x+1}}</span>
       </span>
 
       <script src="main.js"></script>

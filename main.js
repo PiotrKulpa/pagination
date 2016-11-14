@@ -14,14 +14,10 @@ app.controller('paginationCtrl', function($scope, $http){
 
     $scope.paginationRange = function(pageNumber) {
 
-      console.log(pageNumber);
-        //return 20;
-        //alert('ok');
-        //console.log('okok')
-        //0*10
-        //1*10
-        //this.pageNumber * 10;
+      $scope.n = pageNumber * 10;
+
     };
+
 
 
 });
