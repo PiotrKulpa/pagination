@@ -10,14 +10,18 @@
       <hr>
       <h1>Hello {{yourName}}!</h1>
     </div>
-      
+
       <ol>
   <li ng-repeat="x in myData | limitTo: 30: paginationRange()">
     {{ x.length + x.Name + ', ' + x.Country }}
   </li>
 </ol>
-      <span ng-click="paginationRange()" value="0">1</span>
-      
+
+
+      <span ng-repeat="x in paginationData">
+        <span  ng-click="paginationRange(1)">{{x+1}}</span>
+      </span>
+
       <script src="main.js"></script>
   </body>
 </html>

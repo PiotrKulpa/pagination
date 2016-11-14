@@ -4,9 +4,17 @@ app.controller('paginationCtrl', function($scope, $http){
         $scope.myData = response.data.records;
         var myDataCount = $scope.myData.length;
         var paginationIndex = Math.ceil(myDataCount / 10);
-        //console.log(paginationIndex);
+
+        $scope.paginationData = [];
+        for(i=0; i<paginationIndex; i++){
+          $scope.paginationData.push(i);
+        };
+
     });
+
     $scope.paginationRange = function(pageNumber) {
+
+      console.log(pageNumber);
         //return 20;
         //alert('ok');
         //console.log('okok')
@@ -14,6 +22,6 @@ app.controller('paginationCtrl', function($scope, $http){
         //1*10
         //this.pageNumber * 10;
     };
-    
-    
+
+
 });
